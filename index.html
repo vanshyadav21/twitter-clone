@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>twitter-clone</title>
+  <link rel="shortcut icon" href="https://abs.twimg.com/favicons/twitter-pip.3.ico">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="css/output.css" />
+</head>
+
+<body class="bg-black">
+  <div class="main flex bg-black text-amber-50">
+    <div class="first w-16 md:w-full">
+      <div class="logo invert my-3 sticky top-2">
+        <svg class="w-8 mx-auto py-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+          <path
+            d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z" />
+        </svg>
+      </div>
+      <div class="sidebar flex w-full justify-center md:items-end sticky top-12">
+        <ul class="flex flex-col md:ml-[100px] text-2xl font-bold space-y-3 px-15">
+          <li
+            class="flex  justify-center items-center gap-3 w-fit hover:bg-gray-600 hover:cursor-pointer hover:rounded-full px-5 py-3">
+            <span class="material-symbols-outlined"> home </span><span class="hidden md:block">Home</span>
+          </li>
+          <li
+            class="flex justify-center items-center gap-3 w-fit hover:bg-gray-600 hover:cursor-pointer hover:rounded-full px-5 py-3">
+            <span class="material-symbols-outlined"> search </span><span class="hidden md:block">Explore</span>
+          </li>
+          <li
+            class="flex justify-center items-center gap-3 w-fit hover:bg-gray-600 hover:cursor-pointer hover:rounded-full px-5 py-3">
+            <span class="material-symbols-outlined">notifications </span><span
+              class="hidden md:block">Notification</span>
+          </li>
+          <li
+            class="flex justify-center items-center gap-3 w-fit hover:bg-gray-600 hover:cursor-pointer hover:rounded-full px-5 py-3">
+            <span class="material-symbols-outlined"> mail </span><span class="hidden md:block">Message</span>
+          </li>
+          <li
+            class="flex justify-center items-center gap-3 w-fit hover:bg-gray-600 hover:cursor-pointer hover:rounded-full px-5 py-3">
+            <span class="material-symbols-outlined">add </span><span class="hidden md:block">Grok</span>
+          </li>
+          <li
+            class="flex justify-center items-center gap-3 w-fit hover:bg-gray-600 hover:cursor-pointer hover:rounded-full px-5 py-3">
+            <span class="material-symbols-outlined">list </span><span class="hidden md:block">Lists</span>
+          </li>
+          <li
+            class="flex justify-center items-center gap-3 w-fit hover:bg-gray-600 hover:cursor-pointer hover:rounded-full px-5 py-3">
+            <span class="material-symbols-outlined"> bookmark </span><span class="hidden md:block">Bookmarks</span>
+          </li>
+          <li
+            class="flex justify-center items-center gap-3 w-fit hover:bg-gray-600 hover:cursor-pointer hover:rounded-full px-5 py-3">
+            <span class="material-symbols-outlined">group </span><span class="hidden md:block"> Community</span>
+          </li>
+          <li
+            class="flex justify-center items-center gap-3 w-fit hover:bg-gray-600 hover:cursor-pointer hover:rounded-full px-5 py-3">
+            <span class="material-symbols-outlined"> crown </span><span class="hidden md:block">Premium</span>
+          </li>
+          <li
+            class="flex justify-center items-center gap-3 w-fit hover:bg-gray-600 hover:cursor-pointer hover:rounded-full px-5 py-3">
+            <span class="material-symbols-outlined"> contacts_product </span><span
+              class="hidden md:block">Profile</span>
+          </li>
+          <li
+            class="flex justify-center items-center gap-3 w-fit hover:bg-gray-600 hover:cursor-pointer hover:rounded-full px-5 py-3">
+            <span class="material-symbols-outlined"> more </span><span class="hidden md:block">More</span>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="post hidden md:block  flex-col sticky top-[800px] bg-blue-400 rounded-full w-[15%] justify-center items-center mx-auto my-6 ">
+        <button class="ml-2">Post</button>
+      </div>
+      <div
+        class="post md:hidden  flex-col sticky top-[700px] bg-blue-400 rounded-full w-[45%] justify-center items-center mx-auto my-2 ">
+        <span class="material-symbols-outlined">
+          edit
+        </span>
+      </div>
+      <div class="hidden md:block sticky top-[900px] justify-self-end mx-auto">
+        <div
+          class="profile w-fit  bg-gray-900 flex rounded-full ml-[180px] p-3 gap-5">
+          <div class="userprofile">
+            <img class="w-[60px] h-[60px] rounded-full ml-4" src="img/spider.jpg" alt="Spider-Man" />
+          </div>
+          <div class="usercon">
+            <span class="font-bold">@Spidy</span>
+            <div class="text-gray-500">Spider-Man from Marvel</div>
+          </div>
+          <div class="more mt-4 text-3xl">...</div>
+        </div>
+      </div>
+
+      <div class="md:hidden flex-col sticky top-[745px] rounded-full  justify-center items-center  ">
+        <div class="profile w-fit bg-gray-900 flex">
+          <div class="userprofile">
+            <img class="w-[30px] h-[30px] rounded-full ml-4 my-3" src="img/spider.jpg" alt="Spider-Man" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="second  border-x-[0.5px] border-gray-700 w-full">
+      <div class="top flex relative">
+        <div class=" absolute w-[15%] bottom-0 ml-[16%] z-10 rounded-full h-[1px] bg-blue-400"></div>
+        <div class="left flex justify-center w-full my-5 text-lg">For you</div>
+        <div class="right flex justify-center w-full my-5 text-lg ">Following</div>
+        <div class="setting my-5">
+          <span class="material-symbols-outlined">settings</span>
+        </div>
+      </div>
+      <div class="w-full h-[1px] bg-gray-700"></div>
+      <div class="happen flex justify-between gap-10 my-6">
+        <div class="img">
+          <img class="w-[60px] h-[60px] rounded-full ml-4" src="img/spider.jpg" />
+        </div>
+        <input class="w-full " type="text" placeholder="What is happening..." />
+      </div>
+      <div class="w-full h-[1px] bg-gray-700"></div>
+      <div class="post2 flex justify-center items-center my-3 text-blue-400 text-lg">Post Here</div>
+      <div class="w-full h-[1px] bg-gray-700"></div>
+      <div class="posts">
+        <div class="post flex">
+          <div class="img  m-4 ">
+            <img class="w-18 rounded-full" src="img/ben.jpg" />
+          </div>
+          <div class="content my-3"><span>Ben Tenision</span> <span class=" text-gray-500">@benten10 10hr</span>
+            <div>“Bro copied so many jutsus, even his personality is a copy-paste.”</div>
+            <div class="posting mr-[20px]">
+              <img class="rounded-2xl my-5" src="img/img1.jpg" />
+              <div class="lcons w-full flex justify-evenly items-center">
+
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    comment
+                  </span>1k
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    repeat
+                  </span>25k
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    favorite
+                  </span>1.1m
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    bar_chart
+                  </span>1.8m
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    bookmark
+                  </span>50.1k
+                </div>
+              </div>
+              <div class="w-full h-[1px] bg-gray-700 my-2"></div>
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+      </div>
+      <div class="posts">
+        <div class="post flex">
+          <div class="img  m-4 ">
+            <img class="w-18 rounded-full" src="img/Nagi.jpg" />
+          </div>
+          <div class="content my-3"><span>Nagi Seishiro</span> <span class=" text-gray-500">@nagiseishiro 11hr</span>
+            <div>“Akatsuki members summon giant beasts… Spider-Man summons Wi-Fi issues with his web shooters.”</div>
+            <div class="posting mr-[20px]">
+              <img class="rounded-2xl my-5" src="img/img2.jpg" />
+              <div class="lcons w-full flex justify-evenly items-center">
+
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    comment
+                  </span>1k
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    repeat
+                  </span>25k
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    favorite
+                  </span>1.1m
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    bar_chart
+                  </span>1.8m
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    bookmark
+                  </span>50.1k
+                </div>
+              </div>
+              <div class="w-full h-[1px] bg-gray-700 my-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="posts">
+        <div class="post flex">
+          <div class="img  m-4 ">
+            <img class="w-18 rounded-full" src="img/goku.jpg" />
+          </div>
+          <div class="content my-3"><span>Goku</span> <span class=" text-gray-500">@kakrot 11hr</span>
+            <div>“Bro climbs on rooftops like he’s about to drop the next DC movie trailer.”</div>
+            <div class="posting mr-[20px]">
+              <img class="rounded-2xl my-5" src="img/img3.jpg" />
+              <div class="lcons w-full flex justify-evenly items-center">
+
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    comment
+                  </span>1k
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    repeat
+                  </span>25k
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    favorite
+                  </span>1.1m
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    bar_chart
+                  </span>1.8m
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    bookmark
+                  </span>50.1k
+                </div>
+              </div>
+              <div class="w-full h-[1px] bg-gray-700 my-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="posts">
+        <div class="post flex">
+          <div class="img  m-4 ">
+            <img class="w-18 rounded-full" src="img/zee.jpg" />
+          </div>
+          <div class="content my-3"><span>Zee</span> <span class=" text-gray-500">@zee 11hr</span>
+            <div>“Bro thinks he’s hot, but even the freezer doesn’t take him seriously.”</div>
+            <div class="posting  mr-[20px]">
+              <img class="rounded-2xl my-5" src="img/img4.jpg" />
+              <div class="lcons w-full flex justify-evenly items-center">
+
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    comment
+                  </span>1k
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    repeat
+                  </span>25k
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    favorite
+                  </span>1.1m
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    bar_chart
+                  </span>1.8m
+                </div>
+                <div class="icon flex justify-evenly items-center">
+                  <span class="material-symbols-outlined">
+                    bookmark
+                  </span>50.1k
+                </div>
+              </div>
+              <div class="w-full h-[1px] bg-gray-700 my-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="third w-full ml-5 hidden md:block ">
+      <div class="sticky top-0">
+        <div class="searchbar w-fit ">
+          <input type="text" placeholder="search...."
+            class="w-72 my-5 px-4 py-2 pl-10 text-white bg-blue-950 border rounded-2xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+        </div>
+        <div class="premium  w-72 px-5 py-3 bg-gray-900 rounded-2xl">
+          <h1 class="font-bold text-xl">Subcribe for premium</h1>
+          <br />
+          <p class="text-xs">
+            Upgrade to Premium & Unlock the Best! Why settle for less when you
+            can experience the full potential? With our Premium.
+          </p>
+          <br />
+          <div class="post flex flex-col bg-blue-400 rounded-full w-1/2 justify-center items-center">
+            <button>Subcribe</button>
+          </div>
+        </div>
+        <div class="happening  w-72 px-5 py-3 bg-gray-900 rounded-2xl my-5">
+          <h1 class="font-bold text-xl py-2">What's happening</h1>
+          <h6>like</h6>
+          <p>1.7 Million</p>
+          <p class="flex flex-col my-3 bg-blue-400 rounded-full w-1/2 justify-center items-center">
+            see more
+          </p>
+        </div>
+        <div class="follow  w-72 px-5 py-3 bg-gray-900 rounded-2xl my-5">
+          <h1 class="font-bold text-xl py-2">Who to follow</h1>
+          <ul class="w-fit mx-2 my-2">
+            <li class="flex justify-evenly gap-7 w-fit">
+              <img class="w-[60px]" src="img/zee.jpg" alt="vansh yadav" />
+              <p>Zee</p>
+              <div
+                class="post flex flex-col bg-blue-400 rounded-full w-fit justify-between px-2 mx-8  h-[30px] items-center">
+                <button>follow</button>
+              </div>
+            </li>
+            <li class="flex justify-evenly gap-7 w-fit my-3">
+              <img class="w-[60px]" src="img/Nagi.jpg" alt="vansh yadav" />
+              <p>Nagi</p>
+              <div
+                class="post flex flex-col bg-blue-400 rounded-full w-fit justify-between px-2  h-[30px] mx-6 items-center">
+                <button>Follow</button>
+              </div>
+            </li>
+            <li class="flex justify-evenly gap-7 w-fit my-3">
+              <img class="w-[60px]" src="img/ben.jpg" alt="vansh yadav" />
+              <p>Ben</p>
+              <div
+                class="post flex flex-col bg-blue-400 rounded-full w-fit justify-between px-2 h-[30px]  mx-8 items-center">
+                <button>Follow</button>
+              </div>
+            </li>
+            <li class="flex justify-evenly gap-7 w-fit my-3">
+              <img class="w-[60px]" src="img/goku.jpg" alt="vansh yadav" />
+              <p>Goku</p>
+              <div
+                class="post flex flex-col bg-blue-400 rounded-full w-fit justify-between px-2  h-[30px]  mx-5 items-center">
+                <button>Follow</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <footer class=" w-72 px-5 py-3 bg-gray-900 rounded-2xl my-5>
+            <div
+              class=" container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
+            <!-- Logo -->
+            <div class="logo invert my-3">
+              <svg class="w-8 mx-auto py-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <path
+                  d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z" />
+              </svg>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex flex-col md:flex-row gap-4 text-center md:text-left">
+              <a href="#" class="hover:text-blue-400">Home</a>
+              <a href="#" class="hover:text-blue-400">About</a>
+              <a href="#" class="hover:text-blue-400">Services</a>
+              <a href="#" class="hover:text-blue-400">Contact</a>
+            </div>
+            <!-- Copyright -->
+            <div class="text-center text-sm text-gray-500 mt-6">
+              &copy; 2025 Your Company. All rights reserved.
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
